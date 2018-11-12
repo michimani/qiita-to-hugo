@@ -8,9 +8,10 @@ ini.read('./config.ini', 'UTF-8')
 QIITA_ACCESS_TOKEN = ini.get('qiita', 'access_token')
 QIITA_API_GET_AUTH_USER_ITEMS = '/api/v2/authenticated_user/items?per_page=100'
 QIITA_API_ROOT = 'https://qiita.com'
-QIITA_API_PARAM_PAGE = 1
+QIITA_API_PARAM_PAGE = str(1)
 QIITA_API_PARAM_PER_PAGE = ini.get('qiita', 'per_page')
 REQUEST_HEADERS = {'Authorization': 'Bearer ' + QIITA_ACCESS_TOKEN}
+HUGO_DEFAULT_EYECATCH = ini.get('hugo', 'default_eyecatch')
 
 
 def get_qiita_content_list():
@@ -38,11 +39,11 @@ date: {date}
 draft: false
 categories: {tags}
 tags: {tags}
-eyecatch: ""
+eyecatch: "{eyecatch}"
 ---
 
 {content_body}
-'''.format(title=post['title'], date=post['created_at'], tags=tags, content_body=content_body)
+'''.format(title=post['title'], date=post['created_at'], tags=tags, content_body=content_body, eyecatch=HUGO_DEFAULT_EYECATCH)
 
     with open(full_path, 'w') as f:
         f.write(content)

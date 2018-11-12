@@ -1,3 +1,7 @@
 [qiita]
 access_token = your_qiita_access_token
 per_page = 100
+
+[hugo]
+# example: images/eyecatch-default.png
+default_eyecatch =
