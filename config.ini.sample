@@ -1,0 +1,3 @@
+[qiita]
+access_token = your_qiita_access_token
+per_page = 100
