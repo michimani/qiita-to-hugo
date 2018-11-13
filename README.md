@@ -6,7 +6,7 @@ Qiita の投稿を Hugo 用に出力します。
 
 ```
 $ git clone https://github.com/michimani/qiita-to-hugo.git
-$ cd qiita-to-hugo.git
+$ cd qiita-to-hugo
 ```
 
 2. config setting
