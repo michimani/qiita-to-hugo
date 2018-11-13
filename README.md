@@ -1,5 +1,5 @@
 ## About
-Qitia の投稿を Hugo 用に出力します。
+Qiita の投稿を Hugo 用に出力します。
 
 ## Usage
 1. clone
