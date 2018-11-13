@@ -6,7 +6,7 @@ import configparser
 ini = configparser.ConfigParser()
 ini.read('./config.ini', 'UTF-8')
 QIITA_ACCESS_TOKEN = ini.get('qiita', 'access_token')
-QIITA_API_GET_AUTH_USER_ITEMS = '/api/v2/authenticated_user/items?per_page=100'
+QIITA_API_GET_AUTH_USER_ITEMS = '/api/v2/authenticated_user/items'
 QIITA_API_ROOT = 'https://qiita.com'
 QIITA_API_PARAM_PAGE = str(1)
 QIITA_API_PARAM_PER_PAGE = ini.get('qiita', 'per_page')
